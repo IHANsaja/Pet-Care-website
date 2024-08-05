@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --HeadFoot: #1B1717;
+    --hover: #810000;
+    --bodycolor: #CE1212;
+    --background: #EEEBDD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--background);
+    font-family: 'Kanit',sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--background);
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--HeadFoot);
+}
+
+nav{
+    position: absolute;
+    right: 2%;
+    top: 45%;
+    display: flex;
+    gap: 30px;
+    height: 20px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+
+
+.header nav a{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.header nav a:hover{
+    background-color: var(--hover);
+}
+
+.header h1{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    letter-spacing: 6px;
+}
+
+.header .left-img img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 1001;
+}
+
+.header .right-img img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 1001;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    background-color: var(--HeadFoot);
+    width: 100%;
+    display: flex;
+    height: 300px;
+    margin-top: 10%;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.intro img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--bodycolor);
+}
+
+.intro p{
+    margin: 10px 30px 10px 30px;
+    text-align: center;
+    font-family: 'Gabriola';
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.question p{
+    margin-left: -40px;
+    margin-top: 10px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.visit{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.visit iframe{
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    background-color: var(--background);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform: translateX(-14px);
+}
+
+#loc{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -10px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+#tel{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -80px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+#email{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -150px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+@media (max-width: 1150px) {
+    .footer{
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .header h1{
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    .footer{
+        margin-top: 20%;
+    }
+    nav{
+        gap: 10px;
+    }
+    .intro img{
+        width: 70px;
+    }
+    .intro p{
+        font-size: 10px;
+    }
+    .question p{
+        font-size: 12px;
+        gap: 5px;
+    }
+    .question h2{
+        font-size: 20px;
+    }
+    .information h2{
+        font-size: 20px;
+    }
+    .visit h2{
+        font-size: 20px;
+    }
+    .information address,p{
+        font-size: 12px;
+        width: 50px;
+    }
+    #loc,#tel,#email{
+        scale: 0.8;
+    }
+    .img-container{
+        scale: 0.7;
+    }
+    
+}
+
+/*header & footer end*/
+
+/*content start*/
+
+body{
+    background-image: url(assets/dog-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    height: 70vh;
+}
+
+.content{
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trans-box{
+    width: 80vw;
+    height: 40vh;
+    opacity: 0.7;
+    background-color: #1B1717;
+    border: 5px solid #fff;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    top: 30%;
+    transform: translateY(10%);
+}
+
+.box-content{
+    position: absolute;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+    gap: 10px;
+    transform: translateY(10%);
+}
+
+.box-content hr{
+    width: 90%;
+}
+
+.box-content h1{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.box-content p{
+    text-align: center;
+}
+
+.box-content button{
+    padding: 5px 30px 5px 30px;
+    border: 5px solid var(--bodycolor);
+    height: 40px;
+    width: 250px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.box-content button:hover{
+    background-color: var(--bodycolor);
+    color: var(--background);
+}
+
+@media (max-width:600px) {
+    body{
+        background-position: -200px;
+    }
+
+    .trans-box{
+        transform: translateY(18%);
+    }
+    
+    .box-content{
+        gap: 10px;
+        height: 40vh;
+        margin: 0;
+        margin-left: 1%;
+        margin-left: 1%;
+        padding: 0;
+        top: 18%;
+    }
+    
+    .box-content h1{
+        font-size: 20px;
+        width: 70%;
+        padding-top: 20px;
+    }
+
+    .box-content hr{
+        width: 75%;
+    }
+    
+    .box-content p{
+        font-size: 15px;
+        text-align: justify;
+        width: 70%;
+    }
+    .copyrights p{
+        width: 100%;
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.copyrights{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    height: 18px;
+}

@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --HeadFoot: #1B1717;
+    --hover: #810000;
+    --bodycolor: #CE1212;
+    --background: #EEEBDD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--background);
+    font-family: 'Kanit',sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--background);
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--HeadFoot);
+    z-index: 1;
+}
+
+nav{
+    position: absolute;
+    right: 2%;
+    top: 45%;
+    display: flex;
+    gap: 30px;
+    height: 20px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+
+
+.header nav a{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.header nav a:hover{
+    background-color: var(--hover);
+}
+
+.header h1{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    letter-spacing: 6px;
+}
+
+.header .left-img img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 1001;
+}
+
+.header .right-img img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 1001;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    background-color: var(--HeadFoot);
+    width: 100%;
+    display: flex;
+    height: 300px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.intro img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--bodycolor);
+}
+
+.intro p{
+    margin: 10px 30px 10px 30px;
+    text-align: center;
+    font-family: 'Gabriola';
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.question p{
+    margin-left: -40px;
+    margin-top: 10px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.visit{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.visit iframe{
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    background-color: var(--background);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform: translateX(-14px);
+}
+
+#loc{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -10px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+#tel{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -80px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+#email{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -150px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+@media (max-width: 1150px) {
+    .footer{
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .header h1{
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    nav{
+        gap: 10px;
+    }
+    .intro img{
+        width: 70px;
+    }
+    .intro p{
+        font-size: 10px;
+    }
+    .question p{
+        font-size: 12px;
+        gap: 5px;
+    }
+    .question h2{
+        font-size: 20px;
+    }
+    .information h2{
+        font-size: 20px;
+    }
+    .visit h2{
+        font-size: 20px;
+    }
+    .information address,p{
+        font-size: 12px;
+        width: 50px;
+    }
+    #loc,#tel,#email{
+        scale: 0.8;
+    }
+    .img-container{
+        scale: 0.7;
+    }
+    
+}
+
+/*header & footer end*/
+
+/*About Start*/
+
+.about-us{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5%;
+    padding-top: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    color: var(--HeadFoot);
+    transform: translateY(10%);
+    height: 80vh;
+    gap: 0;
+}
+
+.about-us .dog-img img{
+    height: auto;
+    width: 40vw;
+    position: absolute;
+    z-index: -3;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+
+.about-us .about-para{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: auto;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 10%;
+    color: var(--HeadFoot);
+}
+
+.about-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 35vw;
+}
+
+.about-para h1{
+    font-size: 40px;
+    text-align: left;
+    margin-left: -50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.about-para h1::first-letter{
+    font-size: 50px;
+}
+
+.about-para hr{
+    background-color: var(--HeadFoot);
+    width: 45%;
+    border: none;
+    height: 5px;
+}
+
+.about-para p{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    width: 25vw;
+}
+
+.about-btn button{
+    height: 40px;
+    width: 150px;
+    background-color: var(--background);
+    border: 2px solid var(--HeadFoot);
+    border-radius: 4px;
+}
+
+.about-btn button:hover{
+    border: 2px solid green;
+    cursor: help;
+}
+
+.about-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-btn hr {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%) rotate(90deg); 
+    background-color: var(--HeadFoot);
+    height: 2px;
+    width: 150px;
+    z-index: -1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    background-image: url(assets/sprites.png);
+
+}
+
+#social1 {
+    background-position: -10px -10px;
+}
+
+#social2 {
+    background-position: -78px -10px;
+}
+
+#social3 {
+    background-position: -146px -10px;
+}
+
+#social4 {
+    background-position: -214px -10px;
+}
+
+#social1:hover {
+    background-image: url(assets/sprites2.png);
+    background-position: -10px -10px;
+}
+
+#social2:hover {
+    background-image: url(assets/sprites2.png);
+    background-position: -78px -10px;
+}
+
+#social3:hover {
+    background-image: url(assets/sprites2.png);
+    background-position: -146px -10px;
+}
+
+#social4:hover {
+    background-image: url(assets/sprites2.png);
+    background-position: -214px -10px;
+}
+
+@media (max-width: 1150px) {
+    .about-us .dog-img img,
+    .about-us .about-para {
+        position: relative;
+        width: 100%;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+    }
+
+    .dog-img {
+        z-index: -2;
+        margin-top: 30%;
+    }
+
+    .about-para {
+        z-index: 10;
+    }
+
+    .about-para h1 {
+        font-size: 30px;
+        margin-left: 0;
+    }
+
+    .about-para p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .about-btn {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .about-btn hr {
+        transform: rotateX(0deg);
+        width: 100%;
+        transform: translateX(-50%);
+    }
+    .footer{
+        transform: translateY(50%);
+        margin-top: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about-us{
+        margin-top: 15%;
+    }
+
+    .about-us .dog-img img,
+    .about-us .about-para {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+    }
+
+    .dog-img{
+        height: 70vh;
+        width: 100%;
+    }
+
+    .dog-img img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .about-para h1 {
+        font-size: 24px;
+        margin-left: 0;
+    }
+
+    .about-para p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .about-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-btn button{
+        font-size: 10px;
+    }
+
+    .about-btn button {
+        width: 100%;
+        height: 90% !important;
+    }
+
+    .about-btn hr {
+        width: 4px;
+        height: 65px;
+    }
+    .socials{
+        scale: 0.5;
+        margin-top: 2%;
+    }
+    .copyrights p{
+        width: 100%;
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.copyrights{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    height: 18px;
+}

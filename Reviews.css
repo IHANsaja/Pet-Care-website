@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --HeadFoot: #1B1717;
+    --hover: #810000;
+    --bodycolor: #CE1212;
+    --background: #EEEBDD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--background);
+    font-family: 'Kanit',sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--background);
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--HeadFoot);
+}
+
+nav{
+    position: absolute;
+    right: 2%;
+    top: 45%;
+    display: flex;
+    gap: 30px;
+    height: 20px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+
+
+.header nav a{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.header nav a:hover{
+    background-color: var(--hover);
+}
+
+.header h1{
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    letter-spacing: 6px;
+}
+
+.header .left-img img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 1001;
+}
+
+.header .right-img img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 1001;
+}
+
+.footer{
+    margin-top: 5%;
+    position: relative;
+    bottom: 0;
+    background-color: var(--HeadFoot);
+    width: 100%;
+    display: flex;
+    height: 300px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.intro img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--bodycolor);
+}
+
+.intro p{
+    margin: 10px 30px 10px 30px;
+    text-align: center;
+    font-family: 'Gabriola';
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.question p{
+    margin-left: -40px;
+    margin-top: 10px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.visit{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.visit iframe{
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    background-color: var(--background);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform: translateX(-14px);
+}
+
+#loc{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -10px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+#tel{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -80px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+#email{
+    width: 50px; height: 50px;
+    background: url(assets/css_sprites.png) -10px -150px;
+    object-fit: contain;
+    scale: 0.8;
+    border-radius: 50%;
+    border: 1px solid var(--background);
+}
+
+@media (max-width: 1150px) {
+    .footer{
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .header h1{
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    nav{
+        gap: 10px;
+    }
+    .intro img{
+        width: 70px;
+    }
+    .intro p{
+        font-size: 10px;
+    }
+    .question p{
+        font-size: 12px;
+        gap: 5px;
+    }
+    .question h2{
+        font-size: 20px;
+    }
+    .information h2{
+        font-size: 20px;
+    }
+    .visit h2{
+        font-size: 20px;
+    }
+    .information address,p{
+        font-size: 12px;
+        width: 50px;
+    }
+    #loc,#tel,#email{
+        scale: 0.8;
+    }
+    .img-container{
+        scale: 0.7;
+    }
+    
+}
+
+/*header & footer end*/
+
+/*Reviews Start*/
+
+.Customer-reviews{
+    padding-top: 5% !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    color: var(--HeadFoot);
+    transform: translateY(10%);
+    background-color: gray;
+    z-index: -1;
+    height: 80vh;
+    gap: 0;
+    margin-top: 2%;
+}
+
+.reviews-header{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-left: 17%;
+    padding-top: 30px;
+}
+
+.reviews-content{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    transform: translateY(-20%);
+}
+
+.cus1,.cus2,.cus3{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--HeadFoot);
+    width: 20%;
+    height: 65%;
+    background-color: var(--background);
+    gap: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.reviews-header h2{
+    color: #fcec17;
+    letter-spacing: 2px;
+}
+
+.reviews-header hr{
+    border: none;
+    background-color: var(--background);
+    height: 5px;
+}
+
+.reviews-content img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.reviews-content p.long{
+    font-family: 'Gabriola' !important;
+    width: 80%;
+}
+
+@media (max-width: 1150px) {
+
+    .reviews-header {
+        width: 30vw;
+        margin-left: 10%;
+    }
+
+    .reviews-content {
+        gap: 30px;
+    }
+
+    .cus1, .cus2, .cus3 {
+        width: 60%;
+    }
+
+    .reviews-content img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-content{
+        scale: 0.8;
+        transform: translateY(-30%);
+    }
+    .reviews-header{
+        scale: 0.8;
+    }
+    .cus1, .cus2, .cus3 {
+        height: 55vh;
+    }
+    .copyrights p{
+        width: 100%;
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.copyrights{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    height: 18px;
+}
