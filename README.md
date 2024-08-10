@@ -5,11 +5,9 @@
 
 Welcome to the Pet Care website, a platform designed to provide essential information and resources for pet owners. This website offers a user-friendly interface where visitors can explore various topics related to pet care, health, and wellness.
 
-### Features
+### Navigate
 
-- **Comprehensive Care Guides:** Detailed articles and tips on how to take care of different types of pets, ensuring their well-being.
-- **Interactive Tools:** Includes tools like a pet age calculator and a daily feeding schedule to help owners manage their pet's needs.
-- **Responsive Design:** Optimized for all devices, from desktops to mobile phones, providing a consistent user experience.
+- **Navigate to the website:** [![Visit Pet Care Website](https://img.shields.io/badge/Visit%20Pet%20Care%20Website-05122A?style=for-the-badge&logo=github)](https://ihansaja.github.io/Pet-Care-website/)
 
 ### Tech Stack
 
